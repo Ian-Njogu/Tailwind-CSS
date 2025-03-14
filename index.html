@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col min-h-screen text-gray-900>">
+  <!-- Navbar section -->
+    <nav class="fixed top-0 w-full bg-gray-800 text-white flex justify-between items-center px-8 py-4" >
+    <div class="text-xl font-bold">Mybrand</div>
+    <ul class="hidden md:flex space-x-6 ">
+        <li><a href="#hero" class="hover:white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-x-100">Home</a></li>
+        <li><a href="#about" class="hover:white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-100">About</a></li>
+        <li><a href="#services" class="hover:white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-100">Services</a></li>
+        <li><a href="#contact" class="hover:white transition relative after:content-[''] after:block after:h-0.5 after:w-full after:bg-red-500 after:scale-x-0 after:transition-transform after:duration-300 hover:after:scale-100">Contact</a></li>
+    </ul>
+    <div class="md:hidden text-2xl cursor-pointer">&#9776;</div>
+  </nav>
+    <!-- Hero section -->
+     <header id="hero" class="h-screen bg-cover bg-center justify-center text-white text-center flex  items-center" style="background-image: url('assets/pexels-ayobami-61080370-31023720.jpg');">
+        <div class="bg-black bg-opacity-50 text-center p-4">
+            <h1 class="text-4xl font-bold">Welcome to Mybrand</h1>
+            <p class="text-lg">We are the best in the business</p>
+            <a href="#contact" class="bg-red-500 text-white px-4 py-2 inline-block mt-2 rounded-full hover:bg-red-600">Get started</a>
+        </div>
+           
+     </header>
+     <!-- Main section -->
+     <main>
+        <section id="about " class="mb-10 cursor-pointer" >
+            <h2 class="text-4xl font-bold">About us</h2>
+            <p class="text-gray-700 mt-2"> We specialize in creating responsive websites that adapt to any screen size</p>
+        </section>
+        <section class="mb-10 " id="services" > 
+            <h2 class="text-3xl font-bold">Our services</h2>      
+            
+            <div class="flex justify-center mt-5 gap-6 cursor-pointer">
+                <div class="relative w-full md:w-1/3 h-64 rounded-lg overflow-hidden shadow-lg group "> 
+                    <img src="assets\pexels-canvastudio-3194519.jpg" alt="Web-design" class="absolute inset-0 w-full h-full 
+                        object-cover transition transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white 
+                        transition-transform duration-500 transform scale-0 group-hover:scale-100 z-10 ">
+                        <h2 class="text-xl font-semibold">Web Design</h2>
+                        <p class="mt-2 text-center px-4 ">Modern and responsive web design for businesses</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-center mt-5 gap-6 cursor-pointer">
+                <div class="relative w-full md:w-1/3 h-64 rounded-lg overflow-hidden shadow-lg group "> 
+                    <img src="assets\pexels-pixabay-327540.jpg" alt="Web-design" class="absolute inset-0 w-full h-full 
+                        object-cover transition transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white 
+                        transition-transform duration-500 transform scale-0 group-hover:scale-100 z-10 ">
+                        <h2 class="text-xl font-semibold">SEO optimisation</h2>
+                        <p class="mt-2 text-center px-4 ">Optimise your websites to rank higher on search engines</p>
+                    </div>
+                </div>
+                </div>
+                <div class="flex justify-center mt-5 gap-6 cursor-pointer">
+                    <div class="relative w-full md:w-1/3 h-64 rounded-lg overflow-hidden shadow-lg group "> 
+                        <img src="assets\pexels-canvastudio-3194519.jpg" alt="Web-design" class="absolute inset-0 w-full h-full 
+                            object-cover transition transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white 
+                            transition-transform duration-500 transform scale-0 group-hover:scale-100 z-10 ">
+                            <h2 class="text-xl font-semibold">E-commerce</h2>
+                            <p class="mt-2 text-center px-4 ">We can create an online store for your business</p>
+                        </div>
+                    </div>
+                    </div>
+        </section>
+        <section id="contact" class="bg-gray-200 py-10">
+            <h2 class="text-3xl font-bold text-center">Contact us</h2>
+            <div class="flex justify-center mt-5 gap-6 cursor-pointer">
+                <div class="w-full md:w-1/3">
+                    <form required action="" method="post" class="flex flex-col gap-1 " >
+                        <label for="name">Name:</label>
+                        <input required type="text" name="name" placeholder="Name" class="p-2 rounded-lg">
+                        <label for="Email">Email:</label>
+                        <input required type="email" name="email" placeholder="Email" class="p-2 rounded-lg">
+                        <label for="message">Message:</label>
+                        <textarea required name="message" id="" placeholder="Message" class="p-2 rounded-lg"></textarea>
+                        <button type="submit" class="bg-red-500 text-white w-20 px-4 py-2 inline-block mt-2 rounded-full hover:bg-red-600">Send</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!-- Footer section -->
+        <footer class="bg-gray-800 text-white text-center py-4">
+            <p>&copy; 2021 Mybrand. All rights reserved</p>
+</body>
+</html>
